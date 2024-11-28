@@ -20,7 +20,7 @@ patch:
     #color_scheme_dark: solarized_dark
 
     # horizontal is Deprecated since 0.36, Squirrel 0.15, removed since 1.0.1
-    candidate_list_layout: linear  # stacked | linear
+    candidate_list_layout: stacked # stacked | linear
     text_orientation: horizontal  # horizontal | vertical
     inline_preedit: true
     # Whether to embed selected candidate as text in input field
