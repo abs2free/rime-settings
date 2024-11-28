@@ -155,6 +155,7 @@ patch:
     #- charset_filter@gbk
     #- single_char_filter
   engine/processors:
+    - ascii_composer #删除可以组织鼠须管中英文切换
     - recognizer
     - key_binder
     - speller
