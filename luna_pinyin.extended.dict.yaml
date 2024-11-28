@@ -42,11 +42,10 @@ use_preset_vocabulary: true
 #雙拼不支持 luna_pinyin.cn_en 詞庫，請用戶手動禁用。
 
 import_tables:
-  - dict/luna_pinyin
+  - luna_pinyin  # 系统自带词库
   - dict/luna_pinyin.xiandaihanyu
   - dict/luna_pinyin.chengyusuyu
   - dict/luna_pinyin.popular
-  - dict/essay
   - dict/luna_pinyin.computer
   - dict/luna_pinyin.kaifa
   - dict/luna_pinyin.poetry
@@ -55,7 +54,6 @@ import_tables:
   - dict/luna_pinyin.shopping
   - dict/luna_pinyin.website
   - dict/luna_pinyin.mingxing
-  - dict/zhwiki
   - dict/luna_pinyin.hanyu
   - dict/luna_pinyin.music.dict.yaml
   - dict/luna_pinyin.name.dict.yaml
