@@ -56,4 +56,7 @@ import_tables:
   - dict/luna_pinyin.website
   - dict/luna_pinyin.mingxing
   - dict/zhwiki
+  - dict/luna_pinyin.hanyu
+  - dict/luna_pinyin.music.dict.yaml
+  - dict/luna_pinyin.name.dict.yaml
 ...
