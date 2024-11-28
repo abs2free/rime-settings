@@ -14,14 +14,6 @@
         "dicts": [
           {
             "type": "text",
-            "file": "kaomoji.txt"
-          },
-          {
-            "type": "text",
-            "file": "kaomoji_trad.txt"
-          },
-          {
-            "type": "text",
             "file": "emoji_word.txt"
           },
           {

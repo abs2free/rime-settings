@@ -35,8 +35,6 @@ patch:
     #   - liangfen # 反查
   
   # lua
-  engine/translators/@90: lua_translator@thousand
-  engine/translators/@91: lua_translator@number
   engine/translators/@92: lua_translator@time
   engine/translators/@93: lua_translator@lunar
   engine/translators/@94: lua_translator@jieqi
@@ -180,10 +178,6 @@ patch:
   #   - abc_segmentor
   #   - punct_segmentor
   #   - fallback_segmentor
-  emoji_suggestion:
-    opencc_config: emoji.json
-    option_name: emoji_suggestion
-    # tips: all
   
   punctuator:
     import_preset: symbols
@@ -230,22 +224,3 @@ patch:
     patterns:
       punct: "^/([0-9]0?|[A-Za-z]+)$"
       # reverse_lookup: "`[a-z]*'?$" # 反查
-
-
-  # 自定义词库
-  custom_phrase:
-    dictionary: ""
-    user_dict: custom_phrase
-    db_class: stabledb
-    enable_completion: false
-    enable_sentence: false
-    initial_quality: 1
-  "engine/translators/@5": table_translator@custom_phrase
-
-# Rx: BlindingDark/rime-easy-en:customize:schema=double_pinyin_flypy
-  # __include: easy_en:/patch
-  # easy_en/enable_sentence: false
-# Rx: lotem/rime-octagram-data:customize:schema=luna_pinyin,model=hans
-  __include: grammar:/hant
-# Rx: BlindingDark/rime-lua-select-character:customize:schema=luna_pinyin
-  # __include: lua_select_character:/patch #需要以词定字插件打开本行注释
