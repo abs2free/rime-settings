@@ -1,56 +1,13 @@
-﻿# Rime schema
-# vim: set sw=2 sts=2 et:
-# encoding: utf-8
+# https://github.com/BlindingDark/rime-easy-en
 
-schema:
-  schema_id: easy_en
-  name: Easy English
-  version: "0.5"
-  author:
-    - Patrick <ipatrickmac@gmail.com>
-    - BlindingDark <blindingdark@outlook.com>
-  description:
-    Easy English
+patch:
+  # Nonsense words with ☯ pattern appear in English mode
+  # when continuous input enhancement is not used
+  translator/enable_sentence: false
 
-switches:
-  - name: ascii_mode
-    reset: 0
-    states: [ ASCII-OFF, ASCII-ON ]
+  # The continuous input enhancement function is too stuck,
+  # turn off the word segmentation function for continuous input enhancement
+  easy_en/split_sentence: false
 
-engine:
-  processors:
-    - ascii_composer
-    - key_binder
-    - speller
-    - recognizer
-    - punctuator
-    - selector
-    - navigator
-    - express_editor
-  segmentors:
-    - matcher
-    - ascii_segmentor
-    - abc_segmentor
-    - punct_segmentor
-    - fallback_segmentor
-  translators:
-    - table_translator
-    - punct_translator
-  filters:
-    - uniquifier
-    - lua_filter@append_blank_filter
-
-speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA-_
-  delimiter: " '"
-
-translator:
-  dictionary: easy_en
-  spelling_hints: 9
-  comment_format:
-    - xform/^.+$//
-
-recognizer:
-  import_preset: default
-  patterns:
-    uppercase: ''
+  # Does not use continuous input augmentation
+  engine/filters: [uniquifier]
