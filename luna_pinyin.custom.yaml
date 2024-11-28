@@ -27,23 +27,22 @@
 
 #### 需要反查，打开所有带“反查”注释的行，和 reverse_lookup 块  #####
 patch:
+  __include: reverse_lookup:/patch_emoji
+  __include: reverse_lookup:/patch_easy_en
   schema:
     name: 明月拼音
     # dependencies: # 反查
     #   - liangfen # 反查
   
-#  # 加載 easy_en 依賴 not work
-  #"schema/dependencies/@next": easy_en
-  ## 載入翻譯英文的碼表翻譯器，取名爲 english
-  #"engine/translators/@next": table_translator@english
-  ## english 翻譯器的設定項
-  #english:
-    #dictionary: easy_en
-    #spelling_hints: 9
-    #enable_completion: false
-    #enable_sentence: false
-    #initial_quality: -3
-  
+  # lua
+  engine/translators/@90: lua_translator@thousand
+  engine/translators/@91: lua_translator@number
+  engine/translators/@92: lua_translator@time
+  engine/translators/@93: lua_translator@lunar
+  engine/translators/@94: lua_translator@jieqi
+  engine/translators/@95: lua_translator@ganzhi
+
+
   # 載入朙月拼音擴充詞庫
   "translator/dictionary": luna_pinyin.extended
   #  拼写纠错
