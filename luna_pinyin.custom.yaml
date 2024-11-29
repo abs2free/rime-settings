@@ -29,10 +29,6 @@
 patch:
   __include: reverse_lookup:/patch_emoji
   __include: reverse_lookup:/patch_easy_en
-  schema:
-    name: 明月拼音
-    # dependencies: # 反查
-    #   - liangfen # 反查
   
   # lua
   engine/translators/@92: lua_translator@time
