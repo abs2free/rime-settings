@@ -43,18 +43,22 @@ use_preset_vocabulary: true
 
 import_tables:
   - luna_pinyin  # 系统自带词库
-  - dict/luna_pinyin.xiandaihanyu
-  - dict/luna_pinyin.chengyusuyu
-  - dict/luna_pinyin.popular
-  - dict/luna_pinyin.computer
-  - dict/luna_pinyin.kaifa
-  - dict/luna_pinyin.poetry
+  - dict/luna_pinyin.basis
   - dict/luna_pinyin.chat
+  - dict/luna_pinyin.chengyusuyu
+  - dict/luna_pinyin.classical
+  - dict/luna_pinyin.computer
+  - dict/luna_pinyin.hanyu
+  - dict/luna_pinyin.kaifa
+  - dict/luna_pinyin.mingxing
+  - dict/luna_pinyin.music
+  - dict/luna_pinyin.name
+  - dict/luna_pinyin.net
+  - dict/luna_pinyin.popular
+  - dict/luna_pinyin.poetry
   - dict/luna_pinyin.place
+  - dict/luna_pinyin.sgmain
   - dict/luna_pinyin.shopping
   - dict/luna_pinyin.website
-  - dict/luna_pinyin.mingxing
-  - dict/luna_pinyin.hanyu
-  - dict/luna_pinyin.music.dict.yaml
-  - dict/luna_pinyin.name.dict.yaml
+  - dict/luna_pinyin.xiandaihanyu
 ...
